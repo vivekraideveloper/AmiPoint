@@ -1,8 +1,12 @@
 package com.amityprojectvivekrai.amityproject;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -13,11 +17,18 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Random;
+
 public class VideoActivity extends YouTubeBaseActivity {
     Toolbar toolbar;
     Button button;
     YouTubePlayerView playerView;
     YouTubePlayer.OnInitializedListener onInitializedListener;
+
 
 
     @Override
@@ -28,8 +39,8 @@ public class VideoActivity extends YouTubeBaseActivity {
 
         Bundle bundle = getIntent().getExtras();
         final String videoId = bundle.getString("videoId");
-
-
+        final String notesLink = bundle.getString("notesLink");
+        final String name = bundle.getString("name");
 
         toolbar = findViewById(R.id.tool_bar);
         toolbar.setTitle(bundle.getString("name"));
@@ -39,7 +50,10 @@ public class VideoActivity extends YouTubeBaseActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(VideoActivity.this, PDFActivity.class);
+                Toast.makeText(VideoActivity.this, notesLink, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(VideoActivity.this, PDFViewerActivity.class);
+                intent.putExtra("notesLink", notesLink);
+                intent.putExtra("name", name);
                 startActivity(intent);
             }
         });
@@ -72,7 +86,34 @@ public class VideoActivity extends YouTubeBaseActivity {
         playerView.initialize(YoutubeConfig.getApiKey(), onInitializedListener);
     }
 
-    private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
+
+
+    public Bitmap takeScreenshot() {
+        View rootView = findViewById(android.R.id.content).getRootView();
+        rootView.setDrawingCacheEnabled(true);
+        return rootView.getDrawingCache();
+    }
+
+    public void saveBitmap(Bitmap bitmap) {
+        Random random = new Random();
+        int n = random.nextInt(10000);
+        File wallpaperDirectory = new File("/sdcard/Amity Project/");
+// have the object build the directory structure, if needed.
+        wallpaperDirectory.mkdirs();
+        File imagePath = new File(Environment.getExternalStorageDirectory() + "/Amity Project/screenshot"+n+".png");
+        FileOutputStream fos;
+        try {
+            fos = new FileOutputStream(imagePath);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            fos.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            Log.e("GREC", e.getMessage(), e);
+        } catch (IOException e) {
+            Log.e("GREC", e.getMessage(), e);
+        }
+    }
+        private YouTubePlayer.PlaybackEventListener playbackEventListener = new YouTubePlayer.PlaybackEventListener() {
         @Override
         public void onPlaying() {
 

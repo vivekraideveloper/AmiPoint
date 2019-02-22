@@ -135,11 +135,12 @@ public class CourseContentActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     String name = childItem.getValues().get("name");
                     String videoId = childItem.getValues().get("videoId");
+                    String notesLink = childItem.getValues().get("notesLink");
 
                     Intent intent = new Intent(CourseContentActivity.this, VideoActivity.class);
                     intent.putExtra("name", name);
                     intent.putExtra("videoId", videoId);
-
+                    intent.putExtra("notesLink", notesLink);
                     startActivity(intent);
                 }
 
