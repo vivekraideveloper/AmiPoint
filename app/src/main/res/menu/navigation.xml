@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/aboutUs"
+            android:icon="@drawable/about"
+            android:title="About Us" />
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/help"
+            android:title="Help" />
+        <item
+            android:id="@+id/moreApps"
+            android:icon="@drawable/apps"
+            android:title="More Apps" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/contact"
+                android:icon="@drawable/contact"
+                android:title="Contact us"
+
+                />
+        </menu>
+    </item>
+
+    <item android:title="Usage Policy">
+        <menu>
+            <item
+                android:id="@+id/terms"
+                android:icon="@drawable/moreapps"
+                android:title="Terms of Use" />
+
+
+        </menu>
+    </item>
+
+</menu>

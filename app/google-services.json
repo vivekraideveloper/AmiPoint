@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "437942155479",
+    "firebase_url": "https://amityproject-7a079.firebaseio.com",
+    "project_id": "amityproject-7a079",
+    "storage_bucket": "amityproject-7a079.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437942155479:android:8cf92cac2b4bc127",
+        "android_client_info": {
+          "package_name": "com.amityprojectvivekrai.amityproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437942155479-g1l63ndndfju3l1smjmb9qftnfccbj9n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amityprojectvivekrai.amityproject",
+            "certificate_hash": "01e09bf00319c1b2c3414c9fe5a7940d45be4848"
+          }
+        },
+        {
+          "client_id": "437942155479-3mp1p4oomnupfee7eqjifo7hkj84l7bh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3k27BM6vnW6x365MjzSguK6qaADdqYTU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437942155479-3mp1p4oomnupfee7eqjifo7hkj84l7bh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

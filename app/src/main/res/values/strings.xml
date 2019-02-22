@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Amity Project</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="firstAboutUs">We envision a world where people have meaningful experience with the social media platform and organizations on which they can trust, whether in person or online. This is a mammoth world and we can help you to communicate with some of our best online applications.</string>
+    <string name="mission">Day in and day out, we are determined to be your trusted online service provider. Working together, we can make sense of our customer data and improve your digital experience. The outcome: Better digital experiences for our customers. More cheerful lifestyle for our users.</string>
+    <string name="terms">Welcome to Android Masterclass... The terms and conditions included govern your access to the use of this android application. By using the application you accept the terms of service and agree to be bound and abide by these rules. By using this application you represent and warrant that the content prsesent in the app must not be misused under any circumstance.  If you do not meet all these requirements then in that scenario you are not eligible to use this application. Our customer support is available 24/7, if you have any queries regarding the application then you are free to contact us.</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Food!</string>
+    <string name="slide_1_desc">The easiest way to order food from your favourite restaurant!</string>
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+</resources>
