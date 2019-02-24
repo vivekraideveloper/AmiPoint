@@ -17,11 +17,11 @@
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:fontFamily="@font/archivo_black"
+            android:layout_height="60dp"
+            android:gravity = "center|left|left"
+            android:fontFamily="@font/berkshire_swash"
             android:paddingLeft="10dp"
-            android:textColor="@color/brownish"
+            android:textColor="@color/blue"
             android:textSize="28sp" />
     </LinearLayout>
 

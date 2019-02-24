@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#1bae2c</color>
-    <color name="colorPrimaryDark">#158021</color>
+    <color name="colorPrimaryDark">#e7ba09</color>
     <color name="colorAccent">#e47f20</color>
     <color name="green">#1bae2c</color>
     <color name="green2">#28ae54</color>
@@ -11,6 +11,9 @@
     <color name="black">#00000f</color>
     <color name="cardback">#db000000</color>
     <color name="brownish">#82000000</color>
+    <color name="yellow">#ffcc01</color>
+    <color name="blue">#0e385e</color>
+    <color name="light_blue">#e804549b</color>
 
     <!-- Screens background color-->
     <color name="bg_screen1">#f64c73</color>

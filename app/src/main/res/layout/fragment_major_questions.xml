@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/blogs_fragment"
+    android:background="@color/blue"
     tools:context=".NewsFragment">
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/swipe"
@@ -14,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="8dp"
+            android:background="@color/blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"></android.support.v7.widget.RecyclerView>

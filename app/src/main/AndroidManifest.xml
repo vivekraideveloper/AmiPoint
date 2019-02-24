@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,23 +17,27 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Terms" />
         <activity android:name=".AboutUs" />
-        <activity android:name=".ContentActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".NewsActivity" />
+        <activity android:name=".NewsActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"/>
         <activity
             android:name=".VideoActivity"
-            android:parentActivityName=".ContentActivity" />
-        <activity android:name=".CourseContentActivity" />
+            android:parentActivityName=".CourseContentActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"/>
+        <activity android:name=".CourseContentActivity"
+                  android:theme="@style/AppTheme.SlidrActivityTheme"/>
         <activity
             android:name=".BooksDetailActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"/>
         <activity
             android:name=".QuestionsDetailsActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"/>
         <activity
             android:name=".OnBoardActivity"
             android:noHistory="true">
@@ -42,8 +47,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PDFViewerActivity"
-            android:parentActivityName=".VideoActivity"></activity>
+        <activity
+            android:name=".PDFViewerActivity"
+            android:parentActivityName=".VideoActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".WebActivity"
+            android:theme="@style/AppTheme.SlidrActivityTheme"></activity>
+
+
     </application>
 
 </manifest>

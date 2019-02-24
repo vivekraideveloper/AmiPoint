@@ -43,6 +43,8 @@ dependencies {
     implementation 'com.github.barteksc:android-pdf-viewer:2.5.1'
     implementation 'com.jakewharton:butterknife:8.8.1'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.github.hotchemi:android-rate:1.0.1'
+    implementation 'com.r0adkll:slidableactivity:2.0.6'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
 }

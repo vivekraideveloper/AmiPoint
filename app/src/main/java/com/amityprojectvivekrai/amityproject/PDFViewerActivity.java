@@ -82,7 +82,7 @@ public class PDFViewerActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(InputStream inputStream) {
-            pdfView.fromStream(inputStream).swipeHorizontal(pdfViewType).defaultPage(4).enableAnnotationRendering(true).scrollHandle(new DefaultScrollHandle(PDFViewerActivity.this)).enableAntialiasing(true).onLoad(new OnLoadCompleteListener() {
+            pdfView.fromStream(inputStream).swipeHorizontal(pdfViewType).defaultPage(0).enableAnnotationRendering(true).scrollHandle(new DefaultScrollHandle(PDFViewerActivity.this)).enableAntialiasing(true).onLoad(new OnLoadCompleteListener() {
                 @Override
                 public void loadComplete(int nbPages) {
                     progressBar.setVisibility(View.INVISIBLE);

@@ -117,26 +117,14 @@ public class MinorQuestions extends Fragment implements MinorQuestionsAdapter.On
 
     @Override
     public void onItemClick(int position) {
-//        if (interstitialAd.isLoaded()) {
-//            interstitialAd.show();
-//        }
 
-
-//        Upload selectedItem = uploads.get(position);
-//        String name = selectedItem.getName();
-//        String date = selectedItem.getDate();
-//        String time = selectedItem.getTime();
-//        String venue = selectedItem.getVenue();
-//        String description = selectedItem.getDescription();
-//        String imageUrl = selectedItem.getImageUrl();
-//        Intent intent = new Intent(getContext(), NewsActivity.class);
-//        intent.putExtra("name", name);
-//        intent.putExtra("date", date);
-//        intent.putExtra("time", time);
-//        intent.putExtra("venue", venue);
-//        intent.putExtra("description", description);
-//        intent.putExtra("imageUrl", imageUrl);
-//        startActivity(intent);
+        Upload selectedItem = uploads.get(position);
+        String notesLink = selectedItem.getAmazonLink();
+        String name = selectedItem.getName();
+        Intent intent = new Intent(getContext(), PDFViewerActivity.class);
+        intent.putExtra("notesLink", notesLink);
+        intent.putExtra("name", name);
+        startActivity(intent);
 
     }
 

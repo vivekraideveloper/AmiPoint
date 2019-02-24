@@ -118,7 +118,7 @@ public class OnBoardActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(OnBoardActivity.this, MainActivity.class));
+        startActivity(new Intent(OnBoardActivity.this, SplashActivity.class));
         finish();
     }
 

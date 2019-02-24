@@ -20,6 +20,8 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import hotchemi.android.rate.AppRate;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
@@ -39,6 +41,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         onBoardCall();
+
+        AppRate.with(this).setInstallDays(1).setLaunchTimes(2).setRemindInterval(2).monitor();
+        AppRate.showRateDialogIfMeetsConditions(this);
+
         frameLayout = findViewById(R.id.frame_layout);
         navigationView = findViewById(R.id.bottom_nav);
         homeFragment = new HomeFragment();
@@ -46,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         newsFragment = new NewsFragment();
         toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Amity Project");
+        getSupportActionBar().setTitle("AmiPoint");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -203,9 +209,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
+        android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Do you want to Exit!");
+        builder.setTitle("AmiPoint");
+        builder.setIcon(R.drawable.andi);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                MainActivity.super.onBackPressed();
+                finish();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        builder.show();
 
-        super.onBackPressed();
-        finish();
 //        moveTaskToBack(true);
 
     }

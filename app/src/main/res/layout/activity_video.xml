@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context=".VideoActivity">
 
     <include
@@ -29,14 +30,18 @@
     <Button
         android:id="@+id/notesButton"
         android:layout_width="0dp"
-        android:layout_height="70dp"
-        android:background="@color/white"
-        android:fontFamily="@font/aldrich"
-        android:gravity="center_vertical"
-        android:text="  Notes Link:   Link goes here"
-
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/download_button"
+        android:fontFamily="@font/berkshire_swash"
+        android:gravity="center"
+        android:text="Click here to get notes"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textDirection="firstStrong"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/youtubePlayerView" />

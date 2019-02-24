@@ -16,6 +16,7 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.r0adkll.slidr.Slidr;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,6 +37,8 @@ public class VideoActivity extends YouTubeBaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_video);
+
+        Slidr.attach(this);
 
         Bundle bundle = getIntent().getExtras();
         final String videoId = bundle.getString("videoId");

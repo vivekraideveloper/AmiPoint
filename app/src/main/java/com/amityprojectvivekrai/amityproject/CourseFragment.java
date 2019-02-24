@@ -164,7 +164,6 @@ public class CourseFragment extends Fragment implements CourseAdapter.OnItemClic
             interstitialAd3.show();
         }
 
-
     }
 
 }

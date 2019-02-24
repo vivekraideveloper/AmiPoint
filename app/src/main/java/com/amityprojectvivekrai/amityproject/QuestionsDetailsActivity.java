@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.r0adkll.slidr.Slidr;
+
 public class QuestionsDetailsActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private ViewPager mViewPager;
@@ -16,6 +18,7 @@ public class QuestionsDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_questions_details);
+        Slidr.attach(this);
         Bundle bundle = getIntent().getExtras();
         content = bundle.getString("content");
         mToolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
