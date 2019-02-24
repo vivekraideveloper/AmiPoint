@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 final AlertDialog.Builder helpAlert = new AlertDialog.Builder(MainActivity.this);
                 helpAlert.setIcon(R.drawable.andi);
                 helpAlert.setTitle("Help");
-                helpAlert.setMessage("Android Masterclass is your go to app for learning Android Development. Navigate to the Course section for an action packed journey. ");
+                helpAlert.setMessage("AmiPoint is your go to app for learning Android Development. Navigate to the Course section for an action packed journey. ");
                 helpAlert.setPositiveButton("Go Ahead", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
