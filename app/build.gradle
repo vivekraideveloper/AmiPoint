@@ -45,6 +45,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.github.hotchemi:android-rate:1.0.1'
     implementation 'com.r0adkll:slidableactivity:2.0.6'
+    implementation 'tyrantgit:explosionfield:1.0.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
 }

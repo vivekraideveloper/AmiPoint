@@ -123,8 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
         switch (id) {
             case R.id.home:
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
-                startActivity(intent);
+                drawerLayout.closeDrawers();
                 break;
 
             case R.id.aboutUs:
@@ -140,8 +139,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
-                        Intent intent1 = new Intent(MainActivity.this, MainActivity.class);
-                        startActivity(intent1);
+                        drawerLayout.closeDrawers();
                     }
                 });
                 helpAlert.setCancelable(false);
